@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Miffy First Light</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <link rel="icon" type="image/x-icon" href="/src/assets/favicon/favicon.ico">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="navbar__container">
+            <a class="navbar__logo" href="index.html">
+                <img src="./assets/images/Logo-noBackground.png" alt="Mr Maria®">
+            </a>
+            <a class="navbar__home" href="index.html">
+                <img src="./assets/icons/home_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg" alt="Home">
+            </a>
+        </nav>
+    </header>
+    <main class="order-page">
+        <h1 class="order-page__title">Order Miffy First Light</h1>
+        <section class="order-form">
+            <form class="form" action="#">
+                <h2 class="form__heading">Shipping Details</h2>
+                <div class="form__group">
+                    <label for="name" class="form__label">Full name</label>
+                    <input type="text" id="name" name="name" class="form__input" placeholder="John Smith" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form__input" placeholder="john.smith@example.com" required>
+                </div>
+                <div class="form__group">
+                    <label for="phone" class="form__label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form__input" placeholder="+4790909090" pattern="[+]{1}[0-9]{10,14}" required>
+                </div>
+                <div class="form__group">
+                    <label for="address" class="form__label">Street Address</label>
+                    <input type="text" id="address" name="address" class="form__input" placeholder="123 Main Street" required>
+                </div>
+                <div class="form__group">
+                    <label for="number" class="form__label">House/Apartment Number</label>
+                    <input type="text" id="number" name="number" class="form__input" placeholder="Apt 1A" required>
+                </div>
+                <div class="form__group">
+                    <label for="country" class="form__label">Country</label>
+                    <select id="country" name="country" class="form__select" required>
+                        <option value="" disabled selected>Select your country</option>
+                            <option value="se">Sweden</option>
+                            <option value="al">Albania</option>
+                            <option value="ad">Andorra</option>
+                            <option value="am">Armenia</option>
+                            <option value="at">Austria</option>
+                            <option value="az">Azerbaijan</option>
+                            <option value="by">Belarus</option>
+                            <option value="be">Belgium</option>
+                            <option value="ba">Bosnia and Herzegovina</option>
+                            <option value="bg">Bulgaria</option>
+                            <option value="hr">Croatia</option>
+                            <option value="cy">Cyprus</option>
+                            <option value="cz">Czech Republic</option>
+                            <option value="dk">Denmark</option>
+                            <option value="ee">Estonia</option>
+                            <option value="fi">Finland</option>
+                            <option value="fr">France</option>
+                            <option value="ge">Georgia</option>
+                            <option value="de">Germany</option>
+                            <option value="gr">Greece</option>
+                            <option value="hu">Hungary</option>
+                            <option value="is">Iceland</option>
+                            <option value="ie">Ireland</option>
+                            <option value="it">Italy</option>
+                            <option value="kz">Kazakhstan</option>
+                            <option value="kw">Kuwait</option>
+                            <option value="lv">Latvia</option>
+                            <option value="li">Liechtenstein</option>
+                            <option value="lt">Lithuania</option>
+                            <option value="lu">Luxembourg</option>
+                            <option value="mk">North Macedonia</option>
+                            <option value="mt">Malta</option>
+                            <option value="md">Moldova</option>
+                            <option value="mc">Monaco</option>
+                            <option value="me">Montenegro</option>
+                            <option value="nl">Netherlands</option>
+                            <option value="no">Norway</option>
+                            <option value="pl">Poland</option>
+                            <option value="pt">Portugal</option>
+                            <option value="ro">Romania</option>
+                            <option value="ru">Russia</option>
+                            <option value="sm">San Marino</option>
+                            <option value="rs">Serbia</option>
+                            <option value="sk">Slovakia</option>
+                            <option value="si">Slovenia</option>
+                            <option value="es">Spain</option>
+                            <option value="se">Sweden</option>
+                            <option value="ch">Switzerland</option>
+                            <option value="tr">Turkey</option>
+                            <option value="ua">Ukraine</option>
+                            <option value="gb">United Kingdom</option</option>
+                        </select>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="quantity" class="form__label">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" class="form__input" min="1" max="10" value="1" required>
+                </div>
+                <!-- PAYMENT METHOD -->
+                <div class="form__group">
+                    <label class="form__label">Payment Method</label>
+                    <div class="form__options" aria-required="true">
+                        <div class="form__option">
+                            <input type="radio" id="credit-card" name="payment-method" value="credit-card" class="form__radio" required>
+                            <label for="credit-card" class="form__radio-label">Credit Card</label>
+                        </div>
+                        <div class="form__option">
+                            <input type="radio" id="vipps" name="payment-method" value="vipps" class="form__radio">
+                            <label for="vipps" class="form__radio-label">Vipps</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__group form__group--checkbox">
+                    <input type="checkbox" id="agree" name="agree" class="form__checkbox" required>
+                    <label for="agree" class="form__label">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="form__button">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">© 2024 Mr. Maria®. All rights reserved.</p>
+    </footer>
+</body>
+</html>
